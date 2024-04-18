@@ -10,7 +10,7 @@ function comprar() {
     let ingressosVendendo = parseInt(document.getElementById(`qtd-${tipoDoIngresso}`).innerText);
 
     //SE a quantidade de ingressos à venda for igual ou maior a quantidade de ingressos que serao comprados.
-    if(ingressosVendendo >= quantidade){
+    if(ingressosVendendo >= quantidade && quantidade > 0){
         //ingressos a venda menos ingressos comprados
         let saldo = ingressosVendendo - quantidade;
         document.getElementById(`qtd-${tipoDoIngresso}`).innerText = saldo;
